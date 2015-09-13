@@ -5,6 +5,6 @@ Setup - Edit github.cfg with your credentials
 
 Usage
 ```
-# Create a github repo
->githubcreate my-repo "Some Description"
+# Create a GitHub repo
+>githubcreate my-repo-name "Some Description"
 ```
