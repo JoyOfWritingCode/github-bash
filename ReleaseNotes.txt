@@ -1,6 +1,9 @@
 TODO
 - githubinit - create a repository, add collaborator and clone locally
 
+v1.2.0
+- githubskeleton - create a skeleton project locally
+
 v1.1.0
 - githubaddcollaborator - add a collaborator to a repository
 

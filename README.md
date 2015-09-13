@@ -10,4 +10,7 @@ Usage
 
 # Add collaborator
 >githubaddcollaborator my-repo-name collaboratorusername
+
+# Create skeleton project locally (README.md, .gitignore)
+>githubskeleton my-repo-name "Some Description"
 ```
