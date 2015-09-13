@@ -1,0 +1,7 @@
+TODO
+- githubcollaborator - add a collaborator to a repository
+- githubinit - create a repository, add collaborator and clone locally
+
+v1.0.0
+- githubcreate - bash command for creating git repository
+- githubcreate - externalize credentials

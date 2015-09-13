@@ -1,0 +1,28 @@
+#!/bin/bash
+#
+#
+# Create a github repository
+
+# Constants
+readonly CONFIG_FILE="github.cfg"
+readonly GITHUB_CREATE_URL=https://api.github.com/user/repos
+readonly GITHUB_CREATE_PAYLOAD_TEMPLATE='{"name":"REPO_NAME","description":"DESCRIPTION"}'
+
+# Load github credentials from config file
+source $CONFIG_FILE &&
+
+# Read repository name from input args
+if [ $# -ne 2 ]; then
+    echo "Error: Missing args"
+    echo "Usage: githubcreate <repo_name> <description>"
+    exit 1
+fi
+repo_name=$1
+description=$2
+
+# Create github repository using web API
+create_payload=${GITHUB_CREATE_PAYLOAD_TEMPLATE/REPO_NAME/$repo_name}
+create_payload=${create_payload/DESCRIPTION/$description}
+echo $create_payload
+curl $GITHUB_CREATE_URL -u $username -d "$create_payload"
+
