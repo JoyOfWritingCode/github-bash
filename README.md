@@ -7,4 +7,7 @@ Usage
 ```
 # Create a GitHub repo
 >githubcreate my-repo-name "Some Description"
+
+# Add collaborator
+>githubaddcollaborator my-repo-name collaboratorusername
 ```

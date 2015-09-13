@@ -1,0 +1,25 @@
+#!/bin/bash
+#
+# Add a collaborator to an existing github repo
+
+# Constants
+readonly CONFIG_FILE="github.cfg"
+readonly GITHUB_ADD_COLLABORATOR_URL_TEMPLATE=https://api.github.com/repos/OWNER/REPO/collaborators/COLLABORATOR
+
+# Read config
+source $CONFIG_FILE &&
+
+# Parse args
+if [ $# -ne 2 ]; then
+    echo "Error: Missing args"
+    echo "Usage: githubaddcollaborator <repo_name> <collaborator_username>"
+    exit 1
+fi
+repo_name=$1
+collaborator_username=$2
+
+url=$GITHUB_ADD_COLLABORATOR_URL_TEMPLATE
+url=${url/OWNER/$username}
+url=${url/REPO/$repo_name}
+url=${url/COLLABORATOR/$collaborator_username}
+curl -X PUT $url -u $username -d ''
