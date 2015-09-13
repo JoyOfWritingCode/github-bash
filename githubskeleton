@@ -3,20 +3,7 @@
 #
 # Create a skeleton project locally
 
-# Constants
-readonly CONFIG_FILE="github.cfg"
-
-# Load external config
-source $CONFIG_FILE &&
-
-# Read repository name from input args
-if [ $# -ne 2 ]; then
-    echo "Error: Missing args"
-    echo "Usage: githubskeleton <project_name> <description>"
-    exit 1
-fi
-project_name=$1
-description=$2
+source common
 
 # Determine and create the project directory
 # Error if directory exists (so we don't risk overwriting anything)

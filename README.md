@@ -1,7 +1,7 @@
 # github-bash
 Bash commands for calling GitHub APIs from the command line
 
-Setup - Edit github.cfg with your credentials
+Setup - Edit github.cfg with your information
 
 Usage
 ```

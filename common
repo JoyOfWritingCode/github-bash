@@ -1,0 +1,19 @@
+##
+# Shared functionality between GitHub utilities
+##
+
+# Constants
+readonly CONFIG_FILE="github.cfg"
+
+# Load config file
+source $CONFIG_FILE &&
+
+# Check args and initialize project info
+if [ $# -ne 2 ]; then
+    echo "Error: Missing args, expected <project_name> <description>"
+    exit 1
+fi
+project_name=$1
+description=$2
+
+

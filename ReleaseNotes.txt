@@ -1,6 +1,9 @@
 TODO
 - githubinit - create a repository, add collaborator and clone locally
 
+v1.2.1
+- refactor common functionality to shared source
+
 v1.2.0
 - githubskeleton - create a skeleton project locally
 
