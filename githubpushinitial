@@ -1,0 +1,14 @@
+#!/bin/bash
+#
+# Initialize git locally and push to existing GitHub repo
+
+source common
+
+cd "$workspace_base_dir/$project_name"
+git init
+git config user.name "$committer_name"
+git config user.email "$committer_email"
+git add .
+git commit -a -m "initial commit"
+git remote add origin "https://github.com/$username/$project_name.git"
+git push -u origin master

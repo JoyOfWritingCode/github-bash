@@ -1,4 +1,4 @@
-TODO
+v1.3.0
 - githubinit - create a repository, add collaborator and clone locally
 
 v1.2.1

@@ -1,0 +1,20 @@
+#!/bin/bash
+#
+# Create skeleton project and push to GitHub
+
+source common
+
+# Create GitHub repository
+./githubcreate $project_name "$description"
+
+# Add default committer as collaborator, if it's not the same as the default user
+if [ $default_committer != $username ]; then
+    echo "Create collaborator!"
+    ./githubaddcollaborator $project_name $default_committer
+fi
+
+# Create skeleton project
+./githubskeleton $project_name "$description"
+
+# Initialize git locally and push to GitHub
+./githubpushinitial $project_name "$description"

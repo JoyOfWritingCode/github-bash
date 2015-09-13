@@ -5,7 +5,7 @@
 
 source common
 
-# Determine and create the project directory
+# Create the project directory
 # Error if directory exists (so we don't risk overwriting anything)
 project_path="$workspace_base_dir/$project_name"
 if [ -d $project_path ]; then
